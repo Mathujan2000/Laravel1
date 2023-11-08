@@ -30,7 +30,7 @@ Route::delete('/home/{id}',[GamesController::class, 'destroy'])->name('destroy')
 
 Route::get('profile/{username?}', function (Request $request, $username = null) {
     if (isset($username)) {
-        return view('profile', ['username' => $username]);w
+        return view('profile', ['username' => $username]);
     } else {
         return view('profile', ['username' => 'Guest']);
     }
